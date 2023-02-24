@@ -1,0 +1,181 @@
+/* step 1: logo animation */
+#logo {
+    animation: mymove 5s;
+  }
+
+@keyframes mymove {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+    to {
+        width: 475px;
+        opacity: 1;
+    }
+}
+
+/* step 2: font */
+body {
+    font-family: Poppins, serif;
+    background-image: url("/images/concrete_seamless.png");
+    background-color: #f1f1f1;
+}
+
+/* step 3: header */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* step 4: nav link */
+.nav_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* step 5: links stay same color*/
+.nav_links a:visited {
+    color: blue;
+}
+.nav_item a:hover, a:focus{
+    color: #50C7C7;
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
+  }
+
+/* step 6: styling header elements*/
+.card > header {
+    background: #288088;
+    border: 2px solid #45ADAD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.card {
+    /* flex-basis: 450px; */
+    width: 450px;
+    border-radius: 50px 50px 0px 0px;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px 50px 0px 0px;
+}
+
+/* step 9: styling gallery images */
+#image1 {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+#image2 {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+#image3 {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+#image4 {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+#image5 {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+}
+
+/* step 10: using flex to style gallery */
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media screen and (min-width: 900px) {
+/* step 11: styling header */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* step 12: styling nav link */
+.nav_links {
+    display: flex;
+    flex-direction: row;
+}
+
+/* step 13: pricing and card classes */
+.pricing {
+    display: flex;
+    flex-direction: row;
+}
+.card {
+    width: 275px;
+}
+body > header {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+/* step 14: reduced motion */
+}
+@media screen and (prefers-reduced-motion: reduce) {
+    #logo {
+        animation: none;
+    }
+}
+
+/* print view */
+@media print {
+/* step 15: font and remove bg image*/
+body {
+    font-family: Arial, Helvetica;
+    background-image: none;
+}
+/* step 17: space out nav links */
+.nav_links {
+    width: 475px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+
+/* step 18: pricing class */
+.pricing {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+/* step 19: card */
+.card {
+    border: 2px solid #45ADDD;
+    flex-basis: 325px;
+}
+
+/* step 20: hide gallery */
+.gallery, #gallery {
+    display: none;
+}
+
+/* step 21: adding thumbs up emoji */
+.card ul > li:nth-child(2)::after {
+    content: "\01F44D";
+}
+}
